@@ -1,0 +1,67 @@
+﻿<html><head>
+    <meta charset="utf-8">
+    <title>Users, Security Roles &amp; Views </title>
+    <script src="ClientGlobalContext.js.aspx" type="text/javascript"></script>
+    <script src="val_JQuery341"></script>
+    <script src="val_JSON"></script>
+    <script src="val_UsersRightsViewsJS"></script>
+    <link href="val_UsersRightsViewsCSS" rel="stylesheet">
+    <meta>
+</head>
+<body style="overflow-wrap: break-word;" onfocusout="parent.setEmailRange();">
+    <table cellspacing="3" cellpadding="2">
+        <tbody>
+            <tr><td></td></tr>
+            <tr><td colspan="5" align="center"><h3>Users &amp; Security Roles</h3></td></tr>
+            <tr><td><br></td></tr>
+            <tr>
+                <td> Select a security role</td>
+                <td><select id="srolesddl"><option value=""></option> </select></td>
+                <td style="margin: 10px; padding: 5px;"><br></td>
+                <td>Select a user to view roles</td>
+                <td><select id="UsersPicklist"><option value=""></option> </select></td>
+            </tr>
+            <tr>
+                <td>Users who have this role</td>
+                <!--<td><p class="QR" id="userResult"></p></td>-->
+                <td><select id="userResult" size="8" multiple="multiple"></select></td>
+                <td style="margin: 10px; padding: 5px;"><br></td>
+                <td>Security Roles </td>
+                <td><select id="userRoles" size="8" multiple="multiple"></select></td>
+            </tr>
+            <tr><td><br></td></tr><tr><td><br></td></tr>
+            <tr><td colspan="5" align="center"><h3>User views Assign/Delete</h3></td></tr>
+            <tr><td><br></td></tr>
+            <tr>
+                <td>Source user</td>
+                <td><select id="UsersPicklist0"><option value=""></option> </select></td>
+                <td style="margin: 10px; padding: 5px;"><img id="swapimg" onclick="SwapUsers()" src="val_swapicon"></td>
+                <td>Target User to assign to</td>
+                <td><select id="UsersPicklist2"> <option value=""></option></select></td>                
+            </tr>
+            <!--<tr><td>Security Roles </td><td><p class="QR" id="userRoles"></p></td></tr>-->
+            <tr>
+                <td>Views(select views to delete/assign) </td>
+                <td> <div class="block1"><div class="block2"><select title="Select views" class="mselect" id="userviews" style="margin-right: -17px;" size="10" multiple="multiple"></select></div></div></td>
+                <td style="margin: 10px; padding: 5px;"><br></td>
+                <td>Views of target user </td>
+                <td><div class="block1"><div class="block2"><select title="Select views" class="mselect" id="userviews2" style="margin-right: -17px;" size="10" multiple="multiple"></select></div></div></td>
+            </tr>
+            <tr><td><p></p><br></td><td><p><input id="selectAlltoggle" type="checkbox">Sellect All &nbsp;<br>(Hold Ctrl(win)/Cmd(Mac) button to select multiple.</p></td></tr>
+            <tr>
+                <td>Select Operation</td>
+                <td>
+                    <input name="operation" type="radio" value="assign">Assign <br>
+                    <input name="operation" type="radio" value="delete">Delete<br>
+                </td>
+                <td> <br></td>
+            </tr>            
+            
+            <tr><td><p></p></td><td><button class="buttonE" id="executebtn">Execute</button> </td>
+            <td colspan="4"> <div class="SuccessMessages" id="userMessages"></div></td>
+            </tr>
+            <tr><td></td></tr>
+        </tbody>
+    </table>
+
+</body></html>
